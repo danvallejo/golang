@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func Assert(t *testing.T, expectedValue int, actualValue int, message string) {
+func Assert(t *testing.T, expectedValue interface{}, actualValue interface{}, message string) {
 	if expectedValue != actualValue {
 		fmt.Println("Msg:", message, "Expected:", expectedValue, "Actual:", actualValue)
 	}

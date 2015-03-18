@@ -22,4 +22,8 @@ func main() {
 		"Rectangle": "rect",
 	}
 	fmt.Println(shapes)
+
+	for k, v := range shapes {
+		fmt.Println("key:", k, "value:", v)
+	}
 }
