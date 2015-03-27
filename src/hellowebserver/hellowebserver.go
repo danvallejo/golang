@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"io"
 	"net/http"
 )
@@ -47,5 +48,5 @@ func main() {
 	http.HandleFunc("/hello", hello)
 	http.HandleFunc("/bye", bye)
 
-	http.ListenAndServe(":8080", nil)
+	fmt.Println(http.ListenAndServe(":8080", nil))
 }
