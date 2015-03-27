@@ -22,10 +22,7 @@ namespace DynamoDb
         {
             try
             {
-                var awsAccessKeyId = "AKIAJD2WHCTXQG36N3NA";
-                var awsSecret = "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";
-
-                var creds = new BasicAWSCredentials(awsAccessKeyId, awsSecret);
+                var creds = new ;
 
                 var client = new AmazonDynamoDBClient(creds, RegionEndpoint.USWest2);
 
