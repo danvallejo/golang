@@ -11,7 +11,9 @@ func main() {
 
 	switch month {
 	case 1:
-		fmt.Println("January")
+		fmt.Println("January has 31 days")
+	case 2:
+		fmt.Println("February has 28 days")
 	default:
 		fmt.Println("Invalid month")
 	}
