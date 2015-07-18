@@ -27,6 +27,7 @@ func main() {
 	total := 0.0
 	for _, v := range scores {
 		total += v
+		//OR: total = total + v
 	}
 	fmt.Println("Total=", total)
 	fmt.Println("Average=", total/float64(len(scores)))
