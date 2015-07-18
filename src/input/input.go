@@ -7,7 +7,7 @@ func main() {
 
 	fmt.Print("Input:")
 
-	fmt.Scanf("%f", &input)
+	fmt.Scanf("%f\n", &input)
 
 	fmt.Println("Output:", input)
 }
