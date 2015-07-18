@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	var toys map[string]int = make(map[string]int)
+	var toys map[string]int
 
 	fmt.Println(toys)
 

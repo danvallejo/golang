@@ -15,6 +15,12 @@ func main() {
 
 	fmt.Println(values)
 
+	t := [2]int{
+		5,
+		4,
+	}
+	fmt.Println(t)
+
 	scores := []float64{88.1, 72.2, 93.4, 104.0, 65.8}
 	fmt.Println(scores)
 
