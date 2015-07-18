@@ -14,9 +14,9 @@ func main() {
 		}
 	case 1:
 		fmt.Println(1)
-	case 2:
+	case 2: // this is an implied break
 	case 3:
-		fmt.Println("2 or 3")
+		fmt.Println("3")
 	case 4, 5, 6:
 		fmt.Println("4, 5 or 6")
 	default:
