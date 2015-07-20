@@ -17,7 +17,7 @@ func (p *Person) Talk() {
 }
 
 func (p *Dog) Woof() {
-	fmt.Println("Woof")
+	fmt.Println("Woof, my name is", p.Name)
 }
 
 type Android struct {
@@ -28,6 +28,9 @@ type Android struct {
 
 func main() {
 	a := new(Android)
+
+	a.Dog.Name = "fido"
+
 	a.Person.Name = "dave"
 	a.Person.Talk() // has-a
 
