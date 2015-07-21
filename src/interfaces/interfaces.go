@@ -22,6 +22,7 @@ func (c *Circle) area() float64 {
 	return pi * float64(c.radius*c.radius)
 }
 
+// Stringer interface
 func (c Circle) String() string {
 	return fmt.Sprintf("{x=%d, y=%d, radius=%d}", c.x, c.y, c.radius)
 }
