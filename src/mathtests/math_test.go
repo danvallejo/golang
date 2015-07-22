@@ -1,19 +1,19 @@
 package math
 
 import (
-	"fmt"
 	"testing"
 )
 
 func Assert(t *testing.T, expectedValue interface{}, actualValue interface{}, message string) {
 	if expectedValue != actualValue {
-		fmt.Println("Msg:", message, "Expected:", expectedValue, "Actual:", actualValue)
+		t.Errorf("Msg: %s Expected: %v Actual: %v", message, expectedValue, actualValue)
 	}
 }
 
 func TestAdd(t *testing.T) {
 	sum := Add(1, 2)
-	Assert(t, 3, sum, "Invalid sum")
+	t.Logf("TestAdd: %v + %v", 1, 2)
+	Assert(t, 31, sum, "Invalid sum")
 
 }
 
