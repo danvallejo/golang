@@ -4,9 +4,9 @@ import "fmt"
 import "encoding/json"
 
 type Circle struct {
-	X      int
-	Y      int
-	Radius int
+	X      int `json:"x"`
+	Y      int `json:"y"`
+	Radius int `json:"radius"`
 }
 
 func main() {
