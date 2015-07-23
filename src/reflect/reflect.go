@@ -8,13 +8,18 @@ import (
 
 func myPrint(args ...interface{}) {
 	for _, arg := range args {
-		str := "{unknown-type}"
+
+		var str string
+
 		v := reflect.ValueOf(arg)
+
 		switch v.Kind() {
 		case reflect.String:
 			str = v.String()
 		case reflect.Int:
 			str = strconv.FormatInt(v.Int(), 10)
+		default:
+			str = "{unknown-type}"
 		}
 		fmt.Println(reflect.TypeOf(arg), "["+str+"]")
 	}
