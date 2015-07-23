@@ -11,6 +11,7 @@ func hello(res http.ResponseWriter, req *http.Request) {
 		"Content-Type",
 		"text/html",
 	)
+
 	io.WriteString(
 		res,
 		`<doctype html>
@@ -30,6 +31,7 @@ func bye(res http.ResponseWriter, req *http.Request) {
 		"Content-Type",
 		"text/html",
 	)
+
 	io.WriteString(
 		res,
 		`<doctype html>
