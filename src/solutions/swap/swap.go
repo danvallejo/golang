@@ -19,7 +19,9 @@ func main() {
 	fmt.Println("x=", x, "y=", y)
 	swap(&x, &y)
 	fmt.Println("x=", x, "y=", y)
-
+	
+    x, y = swapper(x,y)
+	
 	z := 50
 	x, y, z = z, x, y
 	fmt.Println("x=", x, "y=", y, "z=", z)
