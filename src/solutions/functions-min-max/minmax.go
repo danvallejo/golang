@@ -38,11 +38,11 @@ func calculateMinMaxList(values ...int) (min int, max int) {
 func main(){
 	numbers := []int{5, -2, 100, 12, 4, -5}
 
-    min, max := calculateMinMax(numbers)
+	min, max := calculateMinMax(numbers)
 
 	fmt.Println("arr min=", min, "max=", max)
 
-    min, max = calculateMinMaxList(5, -2, 101, 12, 4, -10)
+	min, max = calculateMinMaxList(5, -2, 101, 12, 4, -10)
 
 	fmt.Println("... min=", min, "max=", max)
 }

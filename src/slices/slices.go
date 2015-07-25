@@ -21,4 +21,14 @@ func main() {
 	slice = append(slice, newSlice...)
 
 	fmt.Println("appended len=", len(slice), "cap=", cap(slice), "array=", slice)
+
+	arr := [6]int{0, 1, 2, 3, 4, 5}
+	fmt.Printf("arr %p %v\n", &arr, arr)
+
+	s := arr[:]
+	fmt.Printf("slice %p %v\n", s, s)
+
+	s = append(s, []int{100, 200, 300}...)
+	s = append(s, 99, 98, 97)
+	fmt.Printf("appended slice %p %v\n", s, s)
 }
