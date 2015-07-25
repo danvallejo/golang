@@ -22,7 +22,8 @@ func calculateMinMaxList(values ...int) (min int, max int) {
 	min = values[0]
 	max = values[0]
 
-	for _, v := range values {
+	for index := 0; index < len(values); index++ {
+		v := values[index]
 		if v < min{
 			min = v
 		}
@@ -45,3 +46,5 @@ func main(){
 
 	fmt.Println("... min=", min, "max=", max)
 }
+
+
