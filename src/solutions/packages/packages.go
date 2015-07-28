@@ -1,16 +1,10 @@
 package main
 
 import "fmt"
-
-type Account struct {
-	Name    string
-	Balance int
-}
-
-type Accounts []Account
+import "solutions/accounts"
 
 func main() {
-	accounts := Accounts{
+	accounts := accounts.Accounts{
 		{"Savings", 100},
 		{"Checking", 500},
 	}
