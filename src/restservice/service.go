@@ -13,7 +13,7 @@ import (
 type Contact struct {
 	Id          int    `json:"id"`
 	Name        string `json:"name"`
-	PhoneNumber string `json:phone_number`
+	PhoneNumber string `json:"phone_number"`
 }
 
 type Contacts list.List
@@ -72,14 +72,18 @@ func getSpecific(parms martini.Params) (int, string) {
 func postContact(w http.ResponseWriter, r *http.Request) (int, string) {
 	contact := getPostContact(r)
 	contacts.PushBack(*contact)
-	return http.StatusCreated, "created"
+	jsonBytes, _ := json.Marshal(contact)
+	return http.StatusCreated, string(jsonBytes)
 }
 
 func getPostContact(r *http.Request) *Contact {
-	id, _ := strconv.Atoi(r.FormValue("id"))
-	name := r.FormValue("name")
-	phoneNumber := r.FormValue("phone_number")
-	return &Contact{Id: id, Name: name, PhoneNumber: phoneNumber}
+	decoder := json.NewDecoder(r.Body)
+	contact := new(Contact)
+	err := decoder.Decode(contact)
+	if err != nil {
+		panic("Unable to read json")
+	}
+	return contact
 }
 
 func notfound() string {
