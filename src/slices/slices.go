@@ -18,6 +18,7 @@ func main() {
 	newSlice[1] = 102
 	fmt.Println("newSlice len=", len(newSlice), "cap=", cap(newSlice), "array=", newSlice)
 
+	// append takes a list so we convert the slice/array to element list
 	slice = append(slice, newSlice...)
 
 	fmt.Println("appended len=", len(slice), "cap=", cap(slice), "array=", slice)
