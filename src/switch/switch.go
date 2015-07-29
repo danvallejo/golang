@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	i := 1
+	i := 8
 
 	switch i {
 	case 0:
@@ -19,6 +19,11 @@ func main() {
 		fmt.Println("3")
 	case 4, 5, 6:
 		fmt.Println("4, 5 or 6")
+	case 7:
+		fmt.Println("7")
+		fallthrough
+	case 8:
+		fmt.Println("8")
 	default:
 		fmt.Println("unknown")
 	}
