@@ -15,7 +15,8 @@ func (this Shape) Print(){
 	fmt.Println(this.Name)
 }
 
-func (this Circle) xPrint() {
+// Rename this method to see if Shape.Print is called
+func (this Circle) Print() {
 	fmt.Println(this.Name, this.Radius)
 }
 
@@ -24,6 +25,7 @@ func main() {
 
 	circle.Print()
 	
+	circle.Shape.Print()	
 }
 
 
