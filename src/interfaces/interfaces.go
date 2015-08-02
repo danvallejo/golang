@@ -12,10 +12,19 @@ type Shape interface {
 	area() float64
 }
 
+type Box struct {
+	height int
+	width  int
+}
+
 type Circle struct {
 	x      int
 	y      int
 	radius int
+}
+
+func (b Box) area() float64 {
+	return float64(b.height * b.width)
 }
 
 func (c *Circle) area() float64 {
@@ -38,7 +47,9 @@ func calculateArea(shapes ...Shape) float64 {
 }
 
 func main() {
+	box := Box{height: 10, width: 15}
 	circle := Circle{x: 1, y: 2, radius: 2}
 
-	fmt.Println(circle, circle.area(), calculateArea(&circle))
+	fmt.Println(circle, circle.area(), calculateArea(&circle, box))
+
 }

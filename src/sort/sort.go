@@ -23,10 +23,10 @@ func (this People) Swap(i, j int) {
 }
 
 func main() {
-	kids := []Person{
+	kids := People{
 		{"Zach", 9},
 		{"Abe", 10},
 	}
-	sort.Sort(People(kids))
+	sort.Sort(kids)
 	fmt.Println(kids)
 }
