@@ -1,7 +1,7 @@
 package main
 
 import "fmt"
-import "solutions/accounts"
+import "_SOLUTIONS_/accounts"
 
 func main() {
 	accounts := accounts.Accounts{
