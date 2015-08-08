@@ -6,6 +6,7 @@ import (
 
 const (
 	pi = float64(3.14)
+	E = 2.7
 )
 
 type Shape interface {
