@@ -4,7 +4,6 @@ import "fmt"
 import "sync"
 import "time"
 
-var ch chan string
 var wg sync.WaitGroup
 
 func calculate(ch chan<- string) {
@@ -27,7 +26,7 @@ func print(ch <-chan string) {
 }
 
 func main() {
-	ch = make(chan string, 5)
+	ch := make(chan string, 5)
 
 	go calculate(ch)
 	go print(ch)
