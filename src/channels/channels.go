@@ -7,10 +7,15 @@ import (
 
 func main() {
 	c := make(chan string)
+
 	go calculateSumConcurrent(c, 332)
 	go calculateSumConcurrent(c, 331)
 	go calculateSumConcurrent(c, 330)
 
+	ReadResults(c)
+}
+
+func ReadResults(c <-chan string) {
 	tc := time.After(30 * time.Microsecond)
 	for i := 0; i < 3; i++ {
 		select {
